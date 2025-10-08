@@ -7,16 +7,16 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, { 'Content-Type': 'text/plain; charset=UTF-8' });
         res.end('Strona główna');
     }
-    else if (req.url == '/json') {
+    else if (req.url === '/json') {
         res.writeHead(200, { 'Content-Type': 'text/json' });
         res.end(JSON.stringify({"name": "Antoni"}));
     }
-    else if (req.url == '/html') {
+    else if (req.url === '/html') {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         const html = "<h1>HTML</h1>";
         res.end(html);
     }
-    else if (req.url == '/plik') {
+    else if (req.url === '/plik') {
         let pathName = path.join(__dirname, "plik.html");
         fs.readFile(pathName, function (err, data) {
             if (err) {

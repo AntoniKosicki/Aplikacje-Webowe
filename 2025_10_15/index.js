@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const url = require("url");
-const mime = require("mime-types")
+const mime = require("mime-types");
 const path = require("path");
 
 const server = http.createServer((req, res) => {
@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
     else if (parsedUrl.pathname === '/plik') {
         let pathName = path.join(__dirname, "plik.html");
         fs.readFile(pathName, function (err, data) {
-              if (err) {
+            if (err) {
                 res.writeHead(500, { 'Content-Type': 'text/plain' });
                 res.end(err);
             }

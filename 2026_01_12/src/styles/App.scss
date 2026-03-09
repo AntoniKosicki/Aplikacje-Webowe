@@ -1,0 +1,49 @@
+$primary-color: #2563eb;
+$bg-color: #f8fafc;
+$text-color: #1e293b;
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+nav {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+    font-weight: 600;
+    &:hover { color: $primary-color; }
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.post-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.category-badge {
+  display: inline-block;
+  background: $primary-color;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin: 5px;
+}

@@ -1,0 +1,136 @@
+$accent: #2563eb;
+$dark: #0f172a;
+$text: #334155;
+$bg: #f8fafc;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: $text;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background: $dark;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    .logo {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 800;
+        text-decoration: none;
+    }
+
+    .nav-links a {
+        color: #94a3b8;
+        text-decoration: none;
+        &:hover { color: white; }
+    }
+}
+
+.hero {
+    width: 100%;
+    padding: 60px 4%;
+    background: linear-gradient(135deg, $dark 0%, #1e293b 100%);
+    color: white;
+    h1 { font-size: 3.5rem; margin-bottom: 10px; }
+    p { font-size: 1.2rem; color: #94a3b8; }
+}
+
+.main-content {
+    width: 100%;
+    padding: 40px 4%;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    transition: 0.3s;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    .card-content {
+        padding: 30px;
+        h2 { font-size: 1.4rem; margin-bottom: 15px; text-transform: capitalize; }
+        p { margin-bottom: 20px; color: #64748b; line-height: 1.5; }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: $accent;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+    }
+}
+
+.post-view {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    header {
+        border-bottom: 2px solid $bg;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        h1 { font-size: 3rem; text-transform: capitalize; }
+        .meta { color: $accent; font-weight: 600; margin-bottom: 10px; }
+    }
+    .article-body { font-size: 1.3rem; line-height: 1.8; margin-bottom: 50px; }
+}
+
+.comments-section {
+    background: $bg;
+    padding: 40px;
+    border-radius: 15px;
+    h3 { margin-bottom: 25px; font-size: 1.8rem; }
+}
+
+.comments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.comment-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    strong { color: $accent; display: block; margin-bottom: 10px; }
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: $accent;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.loader {
+    padding: 100px;
+    text-align: center;
+    font-size: 1.5rem;
+}
